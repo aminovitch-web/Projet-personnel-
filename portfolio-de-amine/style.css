@@ -1,0 +1,185 @@
+/* importation de la police de la page */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+
+/* pseudo classe root qui permet de declarer des proprieté css, les  couleurs utilisé */
+:root{
+      
+        --main-color:rgb(233, 233, 233);
+        --base: #6675cc;
+        --primary: #343a40;
+        --secondary: #17a2b8;
+    
+}
+
+ /* l'etoile represente tous le document html */
+
+*{
+    font-family: 'Oswald', sans-serif;  /* utilisation de la police de google */
+    /* définit la façon dont la hauteur et la largeur totale d'un élément est calculée indique 
+au navigateur de prendre en compte la bordure et le remplissage dans
+ la valeur définie pour la largeur et la hauteur.*/
+    box-sizing: border-box; 
+    /* aucune ligne et bordure et la decoration des liens est enlever */
+    outline :none ; border:none;
+    text-decoration: none;
+    /* met les lettres de chaque mots en majuscule */
+    text-transform: capitalize;
+    /* permet d'effectuer une petite animation sur les liens du bloc nav */
+    transition: all .2s linear;
+    line-height: 1.5;
+
+}
+
+html{
+    /* permet le rognage lorsque le contenu depasse */
+    overflow-x:hidden;
+    /* definit le comportement du defilement, Le défilement est doux */
+    scroll-behavior: smooth;
+    /* taille du document html */
+    font-size:76%;
+}
+
+body{
+    background: rgb(163, 158, 158);
+    /* espace dans la gauche */
+    padding-left:30rem;
+
+}
+
+header{
+
+       /* header postionner de manière fixe*/
+     position: fixed;
+     /* positionne l'header sur le coin a gauche de la page */
+     top:0; left: 0; bottom:0;  
+     background:rgb(73, 58, 58);
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-flow:column;
+     padding: 8rem 2rem; 
+     width:30rem;
+     /* texte aligner au centre */
+     text-align:center;
+     
+}
+
+header .logo{
+     text-transform: uppercase; /* tous les caracteres sont ecrit en capitale */
+     color: rgb(31, 80, 122);
+     font-size: 3rem;  /* taille par rapport au document html*/
+     font-weight: bolder; /** le texte est plus foncé */
+
+}
+
+header .logo span{
+    text-transform: uppercase;
+    color:var(--main-color);
+    
+
+}
+
+
+header .navbar a{
+
+     display: block;  /* aligner en bloc */
+     font-size: 2rem;  /* taille à a partir du % du document html */
+     color:#ffffff;
+     margin:2rem 0; /* cree une marge un espace */
+    
+}
+
+header .navbar a:hover{
+
+     letter-spacing: .2rem; /*espace entre les lettres */
+     color:var(--main);
+      font-size:17px;
+      background-color:white;
+     padding: 3rem 5%; /* padding l'espace sur la gauche */
+    position:center; /* l'element positionner au centrer */
+    margin:100px;
+
+    
+
+}
+
+.profile {
+    display: flex; /* permet d'utiliser flexbox pour aligner les objets*/
+    flex-direction: column; /* les elements sont empilé */
+    align-items: center; /* les elements de flexboc sont placé au centrer */
+    padding-bottom: 1rem; /* ajoute un espace dans le bloc en bas */
+    color: var(--base);
+    border-bottom: 1px solid var(--base); /* met une ligne en bas du bloc */
+}
+.profile .img_setting {
+    position: relative; /* permet de positionner les blocs, proprieté qui fonctionne avec absolute */
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%; /* permet d'arrondir les bords */
+    overflow: hidden; /* le contenu es rongé si ca depasse*/
+}
+.profile .img_setting img {
+    position: absolute;
+    top: 0;
+    left: 0;
+      /* positionnement du bloc */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* redimensionnement pour couvir toute la zone du  bloc, en gardant son rapport hauteur largeur */
+}
+.profile h4 {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    font-weight: 600;
+    color:black;
+}
+.profile h5 {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    font-weight: 300;
+    line-height: 1rem;
+    color:black;
+}
+
+.profile .btn {
+    margin-top: 0.8rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    background: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.profile .btn:hover{
+    background: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+.left_items {
+    margin-top: 1.2rem;
+    color: var(--base);
+}
+.left_items .title {
+    padding-bottom: 0.5rem;
+}
+.left_items ul li {
+    list-style: none;
+    margin-bottom: 0.2rem;
+}
+.left_items ul li .icons {
+    display: inline-block; /* Pour placer plusieurs éléments de type block sur la même ligne horizontale sans les flotter. */
+    width: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+.left_items ul li .text {
+    font-weight: 300;
+}
+.left_items ul li .dates {
+    color: var(--secondary);
+    font-weight: 400;
+}
